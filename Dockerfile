@@ -4,8 +4,8 @@ LABEL maintainer="recipeapp.com"
 ENV PYTHONUNBUFFERED 1
 
 
-COPY ./requirments.txt /tmp/requirments.txt
-COPY ./requirments.dev.txt /tmp/requirments.dev.txt
+COPY ./requirements.txt /tmp/requirements.txt
+COPY ./requirements.dev.txt /tmp/requirements.dev.txt
 COPY ./app /app
 WORKDIR /app
 EXPOSE 8000
@@ -20,9 +20,9 @@ RUN python -m venv /py && \
     fi && \
     rm -rf /tmp && \
     adduser \
-    --disabled-password \
-    --no-create-home \
-    django-user && \
+        --disabled-password \
+        --no-create-home \
+        django-user
     
 ENV PATH="/py/bin:$PATH"
 
