@@ -6,6 +6,8 @@ class SampleTest(SimpleTestCase):
         res = calc.add(5, 6)
         self.assertEqual(res, 11)
 
+
     def test_substract(self):
         res = calc.substract(10, 20)
         self.assertEqual(res, 10)
+        
